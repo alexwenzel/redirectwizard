@@ -1,7 +1,7 @@
 plugin:
     name: 'alexwenzel.redirectwizard::lang.plugin.name'
     description: 'This plugin helps you to redirect incoming requests.'
-    author: Alexwenzel
+    author: AlexanderWenzel
     icon: oc-icon-globe
     homepage: ''
 permissions:
