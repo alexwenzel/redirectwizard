@@ -1,0 +1,10 @@
+name: Redirect
+form: $/alexwenzel/redirectwizard/models/redirect/fields.yaml
+modelClass: Alexwenzel\RedirectWizard\Models\Redirect
+defaultRedirect: alexwenzel/redirectwizard/redirectwizard
+create:
+    redirect: 'alexwenzel/redirectwizard/redirectwizard/update/:id'
+    redirectClose: alexwenzel/redirectwizard/redirectwizard
+update:
+    redirect: alexwenzel/redirectwizard/redirectwizard
+    redirectClose: alexwenzel/redirectwizard/redirectwizard

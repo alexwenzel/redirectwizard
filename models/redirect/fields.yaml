@@ -1,0 +1,28 @@
+fields:
+    redirect_from:
+        label: 'Redirect from'
+        span: storm
+        cssClass: col-sm-10
+        type: text
+        comment: 'accepts a URI string like "my/route"'
+    redirect_from_method:
+        label: 'Redirect from - Method'
+        span: storm
+        cssClass: col-sm-2
+        type: dropdown
+    redirect_to:
+        label: 'Redirect to'
+        span: storm
+        cssClass: col-sm-9
+        type: text
+        comment: 'accepts a URI string or a full URL'
+    redirect_to_httpstatus:
+        label: 'Redirect to - Http Status'
+        span: storm
+        cssClass: col-sm-3
+        type: dropdown
+    form_info:
+        span: storm
+        cssClass: col-sm-12
+        path: $/alexwenzel/redirectwizard/views/form_info.htm
+        type: partial

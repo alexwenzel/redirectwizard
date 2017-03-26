@@ -1,0 +1,4 @@
+title: RedirectWizard
+modelClass: Alexwenzel\RedirectWizard\Models\Redirect
+toolbar:
+    buttons: reorder_toolbar

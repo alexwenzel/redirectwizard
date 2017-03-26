@@ -1,0 +1,11 @@
+list: $/alexwenzel/redirectwizard/models/redirect/columns.yaml
+modelClass: Alexwenzel\RedirectWizard\Models\Redirect
+title: 'Your redirects'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'alexwenzel/redirectwizard/redirectwizard/update/:id'
