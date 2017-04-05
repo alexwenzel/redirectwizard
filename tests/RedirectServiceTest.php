@@ -1,4 +1,5 @@
 <?php
+
 namespace Alexwenzel\RedirectWizard\tests;
 
 require_once "../../../tests/PluginTestCase.php";
@@ -139,5 +140,29 @@ class RedirectServiceTest extends PluginTestCase
 
         $service = new RedirectService(new Redirect());
         $this->assertFalse($service->redirectMatch($request));
+    }
+
+    /**
+     * @test
+     */
+    public function optionalParameterShouldWork()
+    {
+        $request1 = Request::create('/abc');
+        $request2 = Request::create('/abc/foo');
+        $request3 = Request::create('/abc/foo/bar');
+
+        $myRedirect = Redirect::create(
+            [
+                'redirect_from' => '/abc/{optional?}',
+                'redirect_from_method' => 'get',
+                'redirect_to' => 'new-route',
+                'redirect_to_httpstatus' => '301',
+            ]
+        );
+
+        $service = new RedirectService(new Redirect());
+        $this->assertEquals('new-route', ( $service->redirectMatch($request1) )->redirect_to);
+        $this->assertEquals('new-route', ( $service->redirectMatch($request2) )->redirect_to);
+        $this->assertFalse($service->redirectMatch($request3));
     }
 }

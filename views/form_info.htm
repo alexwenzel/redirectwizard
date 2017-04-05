@@ -2,15 +2,32 @@
     <hr>
 </div>
 
-<div class="col-sm-4">
-    <strong id="1">Basic example</strong>
-    <p>Redirect from: <code class="inline">my-item/39</code><br>
-        Redirect to: <code class="inline">my-item/39</code></p>
-</div>
-<div class="col-sm-4">
-    <strong id="2">Wildcard example</strong>
-    <p>Redirect from: <code class="inline">my-item/{wildcard}/new-url</code><br>
-        Redirect to: <code class="inline">my-item/39/new-url</code></p>
-</div>
+<div style="font-size: 90%">
+    <div class="col-sm-4">
+        <h4 id="1">Example</h4>
+        <p>Your redirect: <code class="inline">/foo/bar</code></p>
+        <p>Request 1: <code class="inline">/foo</code> matches not<br>
+            Request 2: <code class="inline">/foo/bar</code> matches</p>
+    </div>
+    <div class="col-sm-4">
+        <h4 id="2">Wildcards</h4>
+        <p>Your redirect: <code class="inline">/foo/{wildcard}/bar</code></p>
+        <p>Request 1: <code class="inline">/foo</code> matches not<br>
+            Request 2: <code class="inline">/foo/foo</code> matches not<br>
+            Request 3: <code class="inline">/foo/foo/bar</code> matches<br>
+            Request 3: <code class="inline">/foo/123456789/bar</code> matches<br>
+            Request 3: <code class="inline">/foo/123456789/bar/foo</code> matches not
+        </p>
+        <p>Wildcard expression looks like <code class="inline">{wildcard}</code></p>
+    </div>
 
+    <div class="col-sm-4">
 
+        <h4 id="3">Optional Parameters</h4>
+        <p>Your redirect: <code class="inline">/abc/{optional?}</code></p>
+        <p>Request 1: <code class="inline">/abc</code> matches<br>
+            Request 2: <code class="inline">/abc/foo</code> matches<br>
+            Request 3: <code class="inline">/abc/foo/bar</code> matches not
+        </p>
+    </div>
+</div>

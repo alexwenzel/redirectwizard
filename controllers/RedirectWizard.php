@@ -12,7 +12,7 @@ class RedirectWizard extends Controller
     public $reorderConfig = 'config_reorder.yaml';
 
     public $requiredPermissions = [
-        'redirectwizard' 
+        'redirectwizard.admin'
     ];
 
     public function __construct()
