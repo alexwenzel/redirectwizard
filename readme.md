@@ -25,6 +25,8 @@ Request 3: ``/foo/123456789/bar/foo`` matches not
 
 Wildcard expression looks like `{wildcard}`
 
+Every wildcard name should be used only once: ``/foo/{w1}/{w2}/{w3}/bar``
+
 ## Optional Parameters
 
 Your redirect: ``/abc/{optional?}``
