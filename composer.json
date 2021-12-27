@@ -1,0 +1,23 @@
+{
+    "name": "alexwenzel/redirectwizard-plugin",
+    "description": "This plugin helps you to manage redirection of incoming requests.",
+    "homepage": "https://github.com/alexwenzel/oc-redirectwizard",
+    "type": "october-plugin",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "alexwenzel",
+            "email": "alexander.wenzel.berlin@gmail.com",
+            "homepage": "https://github.com/alexwenzel"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alexwenzel\\RedirectWizard\\": ""
+        }
+    },
+    "minimum-stability": "dev"
+}
